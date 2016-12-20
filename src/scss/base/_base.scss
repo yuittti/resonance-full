@@ -1,0 +1,65 @@
+body, html {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  text-rendering: auto;
+  font-smooth: always;
+
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*:after { 
+    content: " "; 
+    display: block;
+    clear: both;
+}
+
+strong:after,
+b:after,
+em:after {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0; 
+}
+
+a {
+	text-decoration: none; 
+  outline: none; 
+}
+
+figure, figcaption {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  &.-nav-fixed {
+    padding-top: 72px;
+
+  }
+}
+
+.jssocials-share-count-box {
+  height: 33px;
+  line-height: 33px;
+  font-size: 12px;
+}
+
+.jssocials-share-print {
+  background: #fe797c;
+}
+
+.clear-img {
+  float: none !important;
+}
+
+@media print {
+  .announce-video {
+    display: none;
+  }
+}

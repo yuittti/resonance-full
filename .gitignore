@@ -1,0 +1,7 @@
+bower_components/*
+build/*
+mocks/*
+node_modules/*
+app/*
+.idea/*
+src/images/*

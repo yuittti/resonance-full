@@ -1,0 +1,50 @@
+@mixin media($size) {
+  @media only screen and (max-width: $size + px) { @content; }
+}
+
+// Animated hamburger menu icon
+
+@mixin burger-menu($color, $activeClassName) {
+  & {
+    display: inline-block;
+    background: transparent;
+    position: relative;
+    height: 21px;
+    width: 36px;
+
+    &:before,
+    &:after {
+      background: $color;
+      backface-visibility: hidden;
+      content: "";
+      height: 3px;
+      left: 0;
+      transition: 0.75s;
+      width: 36px;
+    }
+
+    &:before {
+      box-shadow: $color 0 9px 0 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &:after {
+      position: absolute;
+      top: 18px;
+    }
+
+    &.#{$activeClassName} {
+      &:before {
+        box-shadow: transparent 0 0 0 0;
+        top: 9px;
+        transform: rotate(225deg);
+      }
+
+      &:after {
+        top: 9px;
+        transform: rotate(315deg);
+      }
+    }
+  }
+}

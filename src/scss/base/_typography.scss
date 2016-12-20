@@ -1,0 +1,264 @@
+.menu-item {
+  font-family:  $RalewayBold;
+  font-size: 18px;
+  color: #040404;
+  
+  @include media(1200) {
+    font-size: 16px;
+  }
+
+  @include media(992) {
+    font-size: 14px;
+  }
+  
+  @include media(767) {
+    font-size: 15px;
+  }
+  
+  a {
+    color: #040404;
+    transition: 0.2s linear;
+    
+    &:hover {
+      color: $aCol;
+    }
+  }
+    
+}
+
+.label {
+  font-family: $RalewayBlack;
+  font-size: 11px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.letter-label {
+  font-family: $RobotoBold;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;  
+}
+
+.txt-label {
+  font-family: $RobotoBold;
+  font-size: 10px; 
+  color: white;
+  letter-spacing: 0.5px; 
+}
+
+.main-title {
+  font-family: $RobotoSlabReg;
+  color: white; 
+  margin: 0;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+}
+
+.main-title-big {
+  @extend .main-title;
+  $line: 26px;
+  font-size: 23px;
+  line-height: $line;
+  max-height: 3*$line;
+  overflow: hidden; 
+  
+  @include media(480) {
+    font-size: 21px; 
+    line-height: 23px;
+    max-height: 69px;  
+  }
+  @include media(400) {
+    font-size: 16px; 
+  }
+  
+}
+
+.main-title-mid {
+  @extend .main-title;
+  $line: 20px;
+  font-size: 16px;
+  line-height: $line;
+  max-height: 4*$line; 
+}
+
+.main-title-sm {
+  @extend .main-title;
+  $line: 16px;
+  font-size: 14px;
+  line-height: $line;
+  max-height: 3*$line;
+  @include media(640) {
+    max-height: 64px;
+  }
+  @include media(480) {
+    font-size: 12px;
+    line-height: 14px;
+    max-height: 4*14px; 
+  }
+  @include media(400) {
+    font-size: 11px;
+    max-height: 70px;
+  }
+}
+
+.announce-title {
+  color: black; 
+  margin: 0;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+}
+
+
+
+.title-sm {
+  font-family: $RobotoSlabReg;
+  font-size: 13px;
+  line-height: 1em;
+  //max-height: 3em;
+  @include media(480) {
+    font-size: 12px;
+    max-height: none;
+    //overflow: visible;
+  }
+  
+}
+
+.title-big {
+  font-family: $RobotoSlabBold;
+  font-size: 17px;
+  line-height: 20px;
+  
+}
+
+.title-date {
+  font-family: $RobotoSlabBold;
+  font-size: 13px;
+  color: black; 
+  max-height: none;
+}
+
+.announce-txt {
+  font-family: $OpenSansReg;
+  font-size: 12px;
+  line-height: 13px;
+  color: black;   
+  margin: 0;
+}
+
+.counter {
+  font-family: $RobotoSlabReg;
+  font-size: 10px;
+  line-height: 1em;
+  color: black;
+  &._red {
+    color: #ff4444;
+  }
+}
+
+.counter-big {
+  font-family: $RobotoBold;
+  font-size: 12px;
+  color: white;
+  line-height: 1em;  
+}
+
+.footer-item.copyright {
+  font-family: $RobotoSlabReg;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+}
+
+.footer-item.footer-menu {
+  font-family: $OpenSansReg;
+  font-size: 15px;
+  color: white;  
+}
+
+.article-header {
+  margin-bottom: 30px;
+  
+  @include media(767) {
+    margin-bottom: 15px;
+  }
+
+  .article-title {
+    font-family: $OpenSansBold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #020000;
+    text-transform: uppercase;
+    margin: 0;
+    
+    @include media(767) {
+      font-size: 22px;
+      line-height: 26px;  
+    }
+
+    @include media(520) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+}
+
+
+.article-txt {
+  font-family: $OpenSansReg;
+  font-size: 14px;
+  color: black;
+
+  @include media(400) {
+    font-size: 13px;
+  }
+  
+  p {
+    margin-top: 0;
+  } 
+
+  a {
+    color: darken($aCol,15%);
+    text-decoration: none;
+    
+    &:after {
+      display: none;
+    }  
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.tags-head {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.tag {
+  font-size: 12px; 
+  line-height: 13px;
+  color: $aCol;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+     color: $aCol;
+  } 
+}
+
+.article-page {
+  .article-txt {
+    p {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
